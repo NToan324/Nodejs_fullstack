@@ -1,7 +1,8 @@
 const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize('hoidanit', 'root', null, {
     host: 'localhost',
-    dialect: 'mysql'
+    dialect: 'mysql',
+    logging: false //hidding Executing (default): SELECT 1+1 AS result
 });
 
 const connectDB = async () => {
